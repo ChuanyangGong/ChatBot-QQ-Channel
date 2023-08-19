@@ -1,6 +1,9 @@
 # ChatBot-QQ-Channel
 这是一个简易的 QQ 频道问答机器人，只需要经过简单的文件配置，即可让你的 QQ频道 拥有一个强大的问答机器人。（本项目的机器人问答能力基于 ChatGPT）
 
+# 体验说明
+本项目已部署在 [C. Y. 的校园频道](https://pd.qq.com/s/an3ew7p64) 的 **校园BBS - 聊天 | 闲聊交友** 区，可在该区域体验本项目的问答功能（注，由于 ChatGPT API 需要收费，通常并不开发，如需体验，请联系作者进行体验）。
+
 # 使用说明
 ## Go 环境配置
 若您的服务器上还没有 Go 开发环境，需要首先配置 Go 语言环境，详情可访问 [Golang官网](https://go.dev/)
@@ -84,3 +87,7 @@ go run main.go
 - openapi 上封装了该项目会用到的 HTTP 请求的接口，包括 [获取通用 WSS 接入点](https://bot.q.qq.com/wiki/develop/api/openapi/wss/url_get.html) 、[发送消息](https://bot.q.qq.com/wiki/develop/api/openapi/message/post_messages.html) 等接口，根据需要可继续扩展
 
 - websocket 上封装了与 QQ机器人进行 websocket 连接的细节，会自动进行鉴权、心跳等操作，用户自定义的事件可通过 `QQBotSDK.event.RegisteHandlers()` 进行注册，目前已实现了对 `AT_MESSAGE_CREATE` 事件的处理，支持进一步扩展
+
+# 联系方式
+
+- email: cy_gong@foxmail.com
