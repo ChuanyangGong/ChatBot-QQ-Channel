@@ -1,2 +1,3 @@
 appid: 12345678
-token: "xxxxxx"
+token: xxxxxx
+openai_token: xxxxxxxx

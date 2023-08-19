@@ -16,15 +16,19 @@ const (
 
 // 用于存储调用API所需的Token信息
 type Token struct {
-	AppID       uint64
-	AccessToken string
-	Type        string
+	AppID           uint64
+	AccessToken     string
+	Type            string
+	OpenaiToken     string
+	UseClashAsProxy bool
 }
 
 // yaml 配置文件中的信息格式
 type Config struct {
-	AppID uint64 `yaml:"appid"`
-	Token string `yaml:"token"`
+	AppID           uint64 `yaml:"appid"`
+	Token           string `yaml:"token"`
+	OpenaiToken     string `yaml:"openai_token"`
+	UseClashAsProxy bool   `yaml:"use_clash_as_proxy"`
 }
 
 // 创建一个默认的 token，默认是 bot 身份
@@ -67,5 +71,7 @@ func (t *Token) ReadFromConfig(filePath string) (_t *Token, err error) {
 	}
 	t.AppID = config.AppID
 	t.AccessToken = config.Token
+	t.OpenaiToken = config.OpenaiToken
+	t.UseClashAsProxy = config.UseClashAsProxy
 	return
 }
