@@ -1,3 +1,4 @@
 appid: 12345678
 token: xxxxxx
-openai_token: xxxxxxxx
+openai_token: sk-xxxxxxxxxxxxxxxx
+use_clash_as_proxy: true
